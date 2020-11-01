@@ -24,7 +24,7 @@ def is_prime(number):
     #All other primes    
     else:
         prime = True
-        for check_number in range(2, (number / 2)+1):
+        for check_number in range(2, (int(number / 2)+1)):
             if number % check_number == 0:
                 prime = False
                 break

@@ -8,3 +8,13 @@ For example, say I type the string: 'My name is Michele'. Then I would see the s
 '''
 __author__: 'maxisui'
 
+
+
+def switcheroo():
+    userinput = input("Write something: ")
+    result = userinput.split()
+    switched = result[::-1]
+    joined = " ".join(switched)
+    print(joined)
+
+switcheroo()

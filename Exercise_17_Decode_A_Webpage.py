@@ -8,15 +8,13 @@ __author__: 'maxisui'
 import requests
 from bs4 import BeautifulSoup
 
-url = 'http://www.nytimes.com/'
+url = 'http://www.reasonabledeviations.com/'
 r = requests.get(url)
 
 soup = BeautifulSoup(r.text, features="html.parser")
 
-for story_heading in soup.find_all(class_=["story-wrapper", "css-kej3w4"]):
+for story_heading in soup.find_all(class_=["post-title"]):
     if story_heading.a:
         print(story_heading.a.text.replace("\n", " ").strip())
     else:
         print(story_heading.a.contents[0].strip())
-
-story_heading.a
